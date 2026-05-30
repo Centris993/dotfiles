@@ -4,7 +4,7 @@
 
 -- Set programs that you use
 local terminal    = "kitty"
-local fileManager = "yazi"
+local fileManager = "kitty yazi"
 local menu        = "hyprlauncher"
 
 ---------------------
@@ -21,7 +21,7 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
 -- Move focus with mainMod + arrow keys
@@ -66,6 +66,7 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 --Noctalia Keybinds
 local ipc = "noctalia msg"
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
 
 -- Core binds
 hl.bind(mainMod .. "+Space", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher"))

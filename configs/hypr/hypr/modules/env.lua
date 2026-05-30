@@ -7,7 +7,9 @@
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
-
+--Nvidia
+hl.env("LIBVA_DRIVER_NAME", "nvidia")
+hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 
 -- Toolkit backend
 hl.env("GDK_BACKEND", "wayland,x11,*")
@@ -28,6 +30,4 @@ hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
 
--- Nvidia
---https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
---I dont really want this to use the graphics card tho
+--x11

@@ -7,3 +7,6 @@ require("modules.windowrules")
 require("modules.layout")
 require("modules.misc")
 require("modules.input")
+require("modules.workspaces")
+-- For Noctalia Color templates
+require("noctalia")
